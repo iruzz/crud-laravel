@@ -12,4 +12,11 @@ class GuruController extends Controller
     $gurus  = Guru::latest()->paginate(10);
     return view('guru.index', compact('gurus'));
    }
+
+   public function create()
+   {
+       return view('guru.create');
+   }
+
+   
 }

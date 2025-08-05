@@ -8,6 +8,7 @@
 <body>
     
     <h1>Daftar Guru</h1>
+      <a href="{{ route('guru.create') }}">ADD PRODUCT</a>
     <table border="1">
         <thead>
             <tr>
@@ -24,6 +25,7 @@
                 <td>{{ $guru->nama }}</td>
                 <td>{{ $guru->umur }}</td>
                 <td>{{ $guru->email }}</td>
+                <td></td>
             </tr>
            @empty
             <tr>
