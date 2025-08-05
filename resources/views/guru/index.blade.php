@@ -18,14 +18,18 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($gurus as $guru)
-                <tr>
-                    <td>{{ $guru->id }}</td>
-                    <td>{{ $guru->nama }}</td>
-                    <td>{{ $guru->umur }}</td>
-                    <td>{{ $guru->email }}</td>
-                </tr>
-            @endforeach
+           @forelse($gurus as $guru)
+            <tr>
+                <td>{{ $guru->id }}</td>
+                <td>{{ $guru->nama }}</td>
+                <td>{{ $guru->umur }}</td>
+                <td>{{ $guru->email }}</td>
+            </tr>
+           @empty
+            <tr>
+                <td colspan="4">Tidak ada data guru</td>
+            </tr>
+           @endforelse
         </tbody>
     </table>
 
